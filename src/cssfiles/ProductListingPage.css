@@ -1,8 +1,8 @@
 /* General Page Styles */
 .product-listing-page {
-  padding: 20px;
+  padding: 7px;
   font-family: Arial, sans-serif;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   width: 100%; /* Ensure the page takes full width */
   background-image: url("../assets/carbackgroundimg.jpg"); /* Add your background image here */
@@ -17,6 +17,7 @@
   margin-bottom: 20px;
   font-size: 2rem;
   color: whitesmoke;
+  margin-top: 10px;
 }
 
 .search-container {

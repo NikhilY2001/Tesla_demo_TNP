@@ -59,7 +59,9 @@ function ProductListingPage() {
 
   return (
     <div className="product-listing-page">
-      <h1 className="page-title">Product Listing</h1>
+      <div style={{ marginTop: "10px" }}>
+        <h1 className="page-title">Product Listing</h1>
+      </div>
 
       {/* Go Back Button */}
       <button className="go-home-button" onClick={handleGoHome}>

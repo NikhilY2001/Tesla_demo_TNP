@@ -8,7 +8,7 @@
 .hero {
   position: relative;
   height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
+  width: 100%; /* Full viewport width */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@
 /* Video Section */
 .video-section {
   position: relative;
-  width: 100vw; /* Full width of the viewport */
+  width: 100%; /* Full width of the viewport */
   height: 100vh; /* Full height of the viewport */
   overflow: hidden; /* Ensures no overflow */
   margin: 0; /* Removes default spacing */
@@ -83,7 +83,7 @@ video {
 }
 /* Section Styling */
 section {
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
   background-color: #f4f4f4;
 }
 .features,

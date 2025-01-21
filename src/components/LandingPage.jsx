@@ -17,9 +17,15 @@ function LandingPage() {
     // Play the video
     videoRef.current.play();
   };
+
   const handleViewCarsClick = () => {
-    // Use navigate to go to the Product Listing Page
-    navigate("/products"); // This navigates to /products route
+    // Navigate to the Product Listing Page
+    navigate("/products");
+  };
+
+  const handleChooseColorClick = () => {
+    // Navigate to the Color Selector Page
+    navigate("/choose-color");
   };
 
   return (
@@ -36,16 +42,23 @@ function LandingPage() {
           <p className="hero-subtitle">
             The future of electric driving is here
           </p>
-          {/* Button triggers scroll to video section and starts the video */}
+          {/* Button to scroll to video section */}
           <button className="cta-button" onClick={handleExploreClick}>
             Feel the Ride
           </button>
-          {/* View Cars Button to Navigate to Product Listing Page */}
+          {/* View Cars Button */}
           <button
             className="cta-button view-cars-button"
             onClick={handleViewCarsClick}
           >
             View Cars
+          </button>
+          {/* Choose Color Button */}
+          <button
+            className="cta-button choose-color-button"
+            onClick={handleChooseColorClick}
+          >
+            Choose Your Color
           </button>
         </div>
       </section>
@@ -56,32 +69,32 @@ function LandingPage() {
         <div className="video-container">
           <video
             ref={videoRef}
-            width="100%" // Adjust width as needed
+            // width="100%"
             height="auto"
             controls
             muted
             style={{
               borderRadius: "10px",
               boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.1)",
+              width: "100%",
+              margin: "4px",
             }}
           >
-            <source
-              src={teslavideo} // Path to your 15-second video
-              type="video/mp4"
-            />
+            <source src={teslavideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
       </section>
 
-      {/* Key Features Section with Background Image */}
+      {/* Key Features Section */}
       <section
         className="features"
         style={{
-          backgroundImage: `url(${keyFeaturesBg})`, // Apply background image to Key Features section
-          backgroundSize: "cover", // Ensure the image covers the entire section
-          backgroundPosition: "center", // Center the image
-          backgroundRepeat: "no-repeat", // Prevent image tiling
+          backgroundImage: `url(${keyFeaturesBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          marginTop: "-40px",
         }}
       >
         <h2 className="section-title">Key Features</h2>
