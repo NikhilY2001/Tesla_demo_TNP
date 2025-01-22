@@ -50,7 +50,7 @@ function CarDetailsPage() {
   return (
     <div className="car-details-page">
       <h1 className="page-title">
-        Bold, sleek, and stylish—our future cars are crafted to impress
+        Bold, sleek, and stylish—our upcoming future cars are crafted to impress
       </h1>
       <div className="car-grid">
         {cars.map((car) => (

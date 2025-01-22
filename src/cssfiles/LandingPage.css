@@ -22,14 +22,14 @@
 .hero-content {
   z-index: 1;
   max-width: 600px; /* Limit the width for readability */
-  margin-top: -60px;
+  margin-top: -180px;
 }
 
 .hero-title {
   font-size: 4rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  color: black;
+  color: whitesmoke;
   margin-top: -200px;
 }
 
@@ -37,20 +37,26 @@
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
-
 .cta-button {
-  background-color: #e82127; /* Tesla Red */
-  color: white;
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  color: white; /* Ensure text is visible */
   font-size: 1.2rem;
   padding: 15px 30px;
-  border: none;
+  border: 2px solid white; /* Optional border to make the button more visible */
   cursor: pointer;
   border-radius: 30px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Hover effect for buttons */
 .cta-button:hover {
-  background-color: #ff2a3e;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.4
+  ); /* Slightly less transparent on hover */
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
 }
 
 .section-title {
