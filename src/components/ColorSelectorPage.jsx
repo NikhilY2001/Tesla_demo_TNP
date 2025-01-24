@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
-import "../cssfiles/ColorSelectorPage.css";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
+import "../cssfiles/ColorSelectorPage.css"; // Import the CSS file for styling
 
-// Import all car images
+// Import car images
 import whiteTesla from "../assets/white-tesla.jpg";
 import blueTesla from "../assets/blue-tesla.jpg";
 import redTesla from "../assets/red-tesla.jpg";
@@ -10,8 +10,8 @@ import midnightBlackTesla from "../assets/midnight-black-tesla.jpg";
 import purpleTesla from "../assets/purple-tesla.jpg";
 
 function ColorSelectorPage() {
-  const [carImage, setCarImage] = useState(whiteTesla);
-  const navigate = useNavigate(); // Hook for navigation
+  const [carImage, setCarImage] = useState(whiteTesla); // Default car image
+  const navigate = useNavigate(); // Initialize navigate hook
 
   const handleColorChange = (color) => {
     switch (color) {
@@ -44,9 +44,10 @@ function ColorSelectorPage() {
     >
       {/* Go Back Button */}
       <button className="go-back-button" onClick={() => navigate("/")}>
-        Go Back
+        &#8592; Go to Home
       </button>
 
+      {/* Color Options */}
       <div className="color-options">
         <button
           onClick={() => handleColorChange("white")}

@@ -1,109 +1,128 @@
 /* General Page Styles */
-.car-details-page {
+.models-page {
   font-family: "Arial", sans-serif;
-  padding: 40px;
   text-align: center;
+  padding: 0px 60px;
+  background-color: white;
   background-image: url("../assets/carbackgroundimg.jpg"); /* Background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh; /* Ensures the background covers the full viewport height */
+  overflow: hidden; /* Prevents scrollbars from appearing */
 }
 
 /* Page Title */
 .page-title {
-  font-size: 3rem; /* Increased font size */
-  margin-bottom: 30px;
-  color: whitesmoke;
+  font-size: 2.5rem;
+  color: white;
+  margin: 30px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
 }
 
-/* Grid Layout for Car Cards */
-.car-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  gap: 30px; /* Increased space between cards */
-  justify-items: center;
-  margin-top: 40px;
+/* Grid Layout for Car Images */
+.model-images {
+  display: grid; /* Set up grid layout */
+  grid-template-columns: 1fr 1fr 1fr; /* 3 cards per row */
+  grid-template-rows: 1fr 1fr; /* 2 rows */
+  gap: 40px 20px; /* Vertical and horizontal gaps */
+  justify-items: center; /* Center images within grid cells */
+  margin-top: 30px;
+  grid-auto-rows: minmax(250px, auto); /* Ensure cards have a fixed height */
 }
 
-/* Card Styles */
-.car-card {
+/* Model Image Container */
+.model-image {
   position: relative;
-  width: 350px; /* Increased default width */
-  height: 250px; /* Increased default height */
+  width: 100%;
+  max-width: 420px; /* Adjust card size */
+  height: 300px; /* Fixed height for cards */
   overflow: hidden;
-  border-radius: 15px; /* More rounded corners */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25); /* Stronger shadow */
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.car-card:hover {
-  transform: scale(1.2); /* Enlarges the card more on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger hover shadow */
-}
-
-/* Background Image for the Card */
-.card-image {
+.model-image img {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.8); /* Slightly darken image */
-  transition: filter 0.4s ease; /* Smooth brightness transition */
+  object-fit: cover; /* Ensure image covers the entire card */
+  transition: opacity 0.3s ease;
 }
 
-.car-card:hover .card-image {
-  filter: brightness(1); /* Restore brightness on hover */
+/* Hover Effect */
+.model-image:hover img {
+  opacity: 0.3; /* Fade out image */
 }
 
-/* Content Overlay */
-.card-content {
+.model-info {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background for text */
   color: white;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
-  padding: 15px; /* Increased padding */
-  border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.4s ease; /* Smooth fade-in on hover */
+  padding: 20px;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
 }
 
-.car-card:hover .card-content {
-  opacity: 1; /* Show content on hover */
+.model-image:hover .model-info {
+  opacity: 1; /* Show text when hovered */
 }
 
-.card-content h3 {
+.model-info h3 {
+  font-size: 1.5rem;
   margin: 0;
-  font-size: 1.5rem; /* Larger title font size */
 }
 
-.card-content p {
-  font-size: 1rem; /* Larger details font size */
-  margin-top: 10px;
+.model-info p {
+  font-size: 1rem;
+  margin-top: 5px;
+  font-weight: lighter;
+}
+
+/* Go Back Button */
+.go-back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid red;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 2000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.go-back-button:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 /* Responsive Layout */
 @media screen and (max-width: 768px) {
-  .car-grid {
-    grid-template-columns: 1fr 1fr; /* 2 cards per row on medium screens */
-  }
-
-  .car-card {
-    width: 300px; /* Adjust card size for smaller screens */
-    height: 220px;
+  .model-images {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 images per row on medium screens */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows */
   }
 }
 
 @media screen and (max-width: 480px) {
-  .car-grid {
-    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  .model-images {
+    grid-template-columns: 1fr; /* 1 image per row on small screens */
+    grid-template-rows: auto; /* Adjust rows to auto on small screens */
   }
 
-  .car-card {
-    width: 100%; /* Full-width card on very small screens */
-    height: auto; /* Let height adjust dynamically */
+  .model-image {
+    max-width: 100%; /* Full width on smaller screens */
   }
 }

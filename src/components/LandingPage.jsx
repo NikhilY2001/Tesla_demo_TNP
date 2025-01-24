@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "../cssfiles/LandingPage.css"; // Import the CSS
-import teslacarimage from "../assets/teslacarimage.png"; // Import the image
+import logo from "../assets/logo.png"; // Import the image
+import teslacarimage from "../assets/teslacarimage.png"; // Import the background image for the hero section
 import teslavideo from "../assets/teslavideo.mp4";
 import CarDetailsPage from "./CarDetailsPage";
 import keyFeaturesBg from "../assets/carbackgroundimg.jpg"; // Import the background image for key features
@@ -12,29 +13,38 @@ function LandingPage() {
   const navigate = useNavigate(); // Initialize the navigate hook
 
   const handleExploreClick = () => {
-    // Scroll to video section
     videoSectionRef.current.scrollIntoView({ behavior: "smooth" });
-    // Play the video
     videoRef.current.play();
   };
 
   const handleViewCarsClick = () => {
-    // Navigate to the Product Listing Page
     navigate("/products");
   };
 
   const handleChooseColorClick = () => {
-    // Navigate to the Color Selector Page
     navigate("/choose-color");
+  };
+
+  const handleModelsClick = () => {
+    navigate("/models");
+  };
+
+  const handleLogoClick = () => {
+    window.location.reload(); // Refresh the page
   };
 
   return (
     <div className="landing-page">
+      {/* Logo Button */}
+      <button className="logo-button" onClick={handleLogoClick}>
+        <img src={logo} alt="Tesla Logo" className="logo-img" />
+      </button>
+
       {/* Hero Section */}
       <section
         className="hero"
         style={{
-          backgroundImage: `url(${teslacarimage})`,
+          backgroundImage: `url(${teslacarimage})`, // Background image for the hero section
         }}
       >
         <div className="hero-content">
@@ -42,24 +52,30 @@ function LandingPage() {
           <p className="hero-subtitle">
             The future of electric driving is here
           </p>
-          {/* Button to scroll to video section */}
-          <button className="cta-button" onClick={handleExploreClick}>
-            Feel the Ride
-          </button>
-          {/* View Cars Button */}
-          <button
-            className="cta-button view-cars-button"
-            onClick={handleViewCarsClick}
-          >
-            View Cars
-          </button>
-          {/* Choose Color Button */}
-          <button
-            className="cta-button choose-color-button"
-            onClick={handleChooseColorClick}
-          >
-            Choose Your Color
-          </button>
+          {/* Buttons aligned horizontally */}
+          <div className="button-row">
+            <button className="cta-button" onClick={handleExploreClick}>
+              Feel the Ride
+            </button>
+            <button
+              className="cta-button view-cars-button"
+              onClick={handleViewCarsClick}
+            >
+              View Cars
+            </button>
+            <button
+              className="cta-button choose-color-button"
+              onClick={handleChooseColorClick}
+            >
+              Choose Your Color
+            </button>
+            <button
+              className="cta-button models-button"
+              onClick={handleModelsClick}
+            >
+              View Models
+            </button>
+          </div>
         </div>
       </section>
 
@@ -69,7 +85,6 @@ function LandingPage() {
         <div className="video-container">
           <video
             ref={videoRef}
-            // width="100%"
             height="auto"
             controls
             muted

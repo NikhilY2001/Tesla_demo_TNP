@@ -1,0 +1,89 @@
+.global-presence-page {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px; /* Adjusted padding to avoid overlap */
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevents any overflow from content */
+}
+
+/* Go Back Button Styles */
+.go-back-button {
+  position: absolute; /* Position at the top-left corner */
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 2000; /* Ensure it's above other elements */
+}
+
+.go-back-button:hover {
+  background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+/* Background Video Styles */
+.background-video {
+  position: absolute; /* Places the video behind the content */
+  top: 0;
+  left: 0;
+  width: 100%; /* Makes the video cover the entire width of the screen */
+  height: 100%; /* Makes the video cover the entire height of the screen */
+  object-fit: cover; /* Ensures the video scales to cover the whole background */
+  z-index: -1; /* Keeps the video behind the content */
+}
+
+/* Content Section */
+.content {
+  position: relative; /* Ensures that content is placed above the background video */
+  z-index: 1; /* Makes sure content appears above the video */
+  text-align: center;
+  padding: 80px 20px;
+  color: white; /* Ensures text is visible on the video */
+}
+
+/* Buttons Section */
+.buttons-container {
+  margin-bottom: 20px;
+}
+
+.buttons-container button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+/* Cards Section with Grid Layout */
+.cards-container {
+  display: grid; /* Enable grid layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Space between rows and columns */
+  justify-items: center; /* Center items horizontally within each grid cell */
+  margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+  width: 100%;
+  max-width: 250px; /* Limit card width */
+  border: 1px solid #ccc; /* Add border for visual separation */
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff; /* White background for the cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}

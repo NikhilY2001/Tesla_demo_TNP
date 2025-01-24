@@ -1,5 +1,4 @@
 /* Full Page Background Image */
-/* Full Page Background Image */
 .color-selector-page {
   height: 100vh; /* Full viewport height */
   width: 100vw; /* Full viewport width */
@@ -13,6 +12,7 @@
   padding: 0;
   overflow: hidden; /* Prevent scrolling */
   background-size: 100%; /* Adjust this percentage to control the zoom level */
+  
 }
 
 /* Buttons Overlay */
@@ -35,23 +35,25 @@
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 /* Go Back Button Styling */
+
 .go-back-button {
-  position: absolute; /* Position it on top of the page */
-  top: 20px; /* Distance from the top */
-  left: 20px; /* Distance from the left */
-  padding: 10px 20px;
-  background-color: #e82127; /* Tesla Red */
-  color: white;
-  border: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  color: grey;
+  border: 2px solid black;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 2000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .go-back-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
 }
