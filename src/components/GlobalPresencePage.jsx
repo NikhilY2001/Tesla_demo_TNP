@@ -2,47 +2,57 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "../cssfiles/GlobalPresencePage.css";
 
+// Importing images
+import office1 from "../assets/office1.jpg";
+import office2 from "../assets/office2.jpg";
+import office3 from "../assets/office3.jpg";
+import office5 from "../assets/office5.jpg";
+import office6 from "../assets/office6.jpg";
+
+// Importing video
+import earthVideo from "../assets/earth.mp4";
+
 const countryData = {
   America: [
     {
-      image: "src/assets/office1.jpg",
+      image: office1,
       name: "New York",
       address: "123 Broadway, NY, USA",
     },
     {
-      image: "src/assets/office2.jpg",
+      image: office2,
       name: "Los Angeles",
       address: "456 Sunset Blvd, CA, USA",
     },
     {
-      image: "src/assets/office3.jpg",
+      image: office3,
       name: "Chicago",
       address: "789 Lake Shore Dr, IL, USA",
     },
     {
-      image: "src/assets/office2.jpg",
+      image: office2,
       name: "Houston",
       address: "101 Main St, TX, USA",
     },
   ],
   France: [
     {
-      image: "src/assets/office5.jpg",
+      image: office5,
       name: "Paris",
       address: "1 Avenue des Champs, Paris, France",
     },
     {
-      image: "src/assets/office6.jpg",
+      image: office6,
       name: "Lyon",
       address: "2 Rue de Lyon, Lyon, France",
     },
     {
-      image: "src/assets/office2.jpg",
+      image: office2,
       name: "Nice",
       address: "3 Promenade des Anglais, Nice, France",
     },
     {
-      image: "src/assets/office1.jpg",
+      image: office1,
       name: "Marseille",
       address: "4 Quai de la Joliette, Marseille, France",
     },
@@ -71,7 +81,7 @@ function GlobalPresencePage() {
       {/* Background Video */}
       <video
         className="background-video"
-        src="src/assets/earth.mp4" // Path to your video file in the src folder
+        src={earthVideo} // Imported video file
         autoPlay
         loop
         muted
