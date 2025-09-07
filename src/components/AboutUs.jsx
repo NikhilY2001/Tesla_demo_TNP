@@ -17,7 +17,7 @@ function AboutUs() {
       image: ceo,
       description:
       //changes
-        "The CEO of Tesla oooo is responsible for shaping the company's vision of accelerating the world's transition to sustainable energy. They oversee all aspects of Tesla's operations, from electric vehicle production to energy solutions, ensuring profitability and long-term growth. The CEO actively engages with investors, government bodies, and the public, driving innovation and strategic initiatives. They represent Tesla in key decisions, partnerships, and global expansion efforts while maintaining the company’s mission-driven culture.",
+        " okokThe CEO of Tesla oooo is responsible for shaping the company's vision of accelerating the world's transition to sustainable energy. They oversee all aspects of Tesla's operations, from electric vehicle production to energy solutions, ensuring profitability and long-term growth. The CEO actively engages with investors, government bodies, and the public, driving innovation and strategic initiatives. They represent Tesla in key decisions, partnerships, and global expansion efforts while maintaining the company’s mission-driven culture.",
     },
     {
       name: "CTO",
