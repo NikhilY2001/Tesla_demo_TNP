@@ -42,6 +42,9 @@ function Footer() {
             <i className="fab fa-instagram"></i>
           </a>
         </div>
+        <div>
+          hello
+        </div>
       </div>
     </footer>
   );
