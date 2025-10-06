@@ -11,6 +11,9 @@ function Navbar() {
       <Link to="/global-presence" className="nav-link">
         Global Presence
       </Link>
+      <Link to="/testimonials" className="nav-link">
+        Testimonials
+      </Link>
     </nav>
   );
 }
