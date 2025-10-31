@@ -9,7 +9,7 @@ function Navbar() {
         About Us
       </Link>
       <Link to="/global-presence" className="nav-link">
-        Global Presence
+        Global Presence found heregithub.com  
       </Link>
     </nav>
   );
