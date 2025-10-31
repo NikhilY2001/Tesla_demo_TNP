@@ -13,7 +13,7 @@ function AboutUs() {
 
   const team = [
     {
-      name: "CEO",
+      name: "CoooooO",
       image: ceo,
       description:
       //changes
