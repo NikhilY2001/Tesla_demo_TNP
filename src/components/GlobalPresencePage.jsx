@@ -77,7 +77,18 @@ function GlobalPresencePage() {
       <button className="go-back-button" onClick={handleGoBack}>
         Go Back
       </button>
-<h1>these are the countries</h1>
+
+<h1
+  style={{
+    color: "white",
+    backgroundColor: "blue",
+    display: "inline-block", // keeps background only behind the text width
+    padding: "6px 12px",
+    borderRadius: "4px",
+  }}
+>
+  these are the countries
+</h1>
       {/* Background Video */}
       <video
         className="background-video"
