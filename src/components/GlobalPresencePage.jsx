@@ -77,7 +77,7 @@ function GlobalPresencePage() {
       <button className="go-back-button" onClick={handleGoBack}>
         Go Back
       </button>
-
+<h1>these are the countries</h1>
       {/* Background Video */}
       <video
         className="background-video"
@@ -86,7 +86,6 @@ function GlobalPresencePage() {
         loop
         muted
       />
-
       {/* Content Section */}
       <div className="buttons-container">
         <button onClick={() => handleCountryClick("America")}>America</button>
