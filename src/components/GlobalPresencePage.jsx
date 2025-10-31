@@ -78,6 +78,17 @@ function GlobalPresencePage() {
         Go Back
       </button>
 
+<h1
+  style={{
+    color: "white",
+    backgroundColor: "blue",
+    display: "inline-block", // keeps background only behind the text width
+    padding: "6px 12px",
+    borderRadius: "4px",
+  }}
+>
+  these are the countries
+</h1>
       {/* Background Video */}
       <video
         className="background-video"
@@ -86,7 +97,6 @@ function GlobalPresencePage() {
         loop
         muted
       />
-
       {/* Content Section */}
       <div className="buttons-container">
         <button onClick={() => handleCountryClick("America")}>America</button>
