@@ -4,6 +4,7 @@ import logo from "../assets/logo.png"; // Import the image
 import teslacarimage from "../assets/teslacarimage.png"; // Import the background image for the hero section
 import teslavideo from "../assets/teslavideo.mp4";
 import CarDetailsPage from "./CarDetailsPage";
+import ReleasedCars from "./ReleasedCars";
 import keyFeaturesBg from "../assets/carbackgroundimg.jpg"; // Import the background image for key features
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 
@@ -137,6 +138,7 @@ function LandingPage() {
         </div>
       </section>
       <CarDetailsPage />
+      <ReleasedCars />
     </div>
   );
 }
