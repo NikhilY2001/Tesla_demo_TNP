@@ -13,6 +13,7 @@ import ColorSelectorPage from "./components/ColorSelectorPage";
 import ModelsPage from "./components/ModelsPage";
 import AboutUs from "./components/AboutUs";
 import GlobalPresencePage from "./components/GlobalPresencePage";
+import ContactPage from "./components/ContactPage";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function AppRoutes() {
       <Route path="/models" element={<ModelsPage />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/global-presence" element={<GlobalPresencePage />} />
+      <Route path="/contact" element={<ContactPage />} />
     </Routes>
   );
 }

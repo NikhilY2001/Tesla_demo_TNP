@@ -2,45 +2,58 @@ import React from 'react';
 import '../cssfiles/ReleasedCars.css';
 
 function ReleasedCars() {
-  const releasedCars = [
+  const carFeatures = [
     {
-      name: "Model S",
-      model: "Plaid",
-      year: 2023,
+      id: "01",
+      icon: "📘",  // You can replace these with actual icons
+      title: "Model S",
+      description: "Tesla's flagship sedan, combining luxury with electric performance. Features advanced autopilot and premium interior.",
     },
     {
-      name: "Model 3",
-      model: "Performance",
-      year: 2023,
+      id: "02",
+      icon: "🌍",
+      title: "Model 3",
+      description: "The most affordable Tesla sedan. Perfect balance of efficiency, performance, and value with cutting-edge technology.",
     },
     {
-      name: "Model X",
-      model: "Long Range",
-      year: 2023,
+      id: "03",
+      icon: "💬",
+      title: "Model X",
+      description: "Luxury SUV with falcon-wing doors. Spacious interior with third-row seating and exceptional performance.",
     },
     {
-      name: "Model Y",
-      model: "Performance",
-      year: 2023,
+      id: "04",
+      icon: "⏰",
+      title: "Model Y",
+      description: "Compact SUV combining versatility with performance. Perfect for families with ample cargo space.",
     },
     {
-      name: "Cybertruck",
-      model: "Tri Motor",
-      year: 2024,
+      id: "05",
+      icon: "✈️",
+      title: "Cybertruck",
+      description: "Futuristic electric pickup truck with unique design. Features bulletproof exterior and impressive towing capacity.",
+    },
+    {
+      id: "06",
+      icon: "📱",
+      title: "Roadster",
+      description: "Next-generation sports car. The fastest production car with groundbreaking acceleration and range.",
     }
   ];
 
   return (
     <div className="released-cars-container">
-      <h2>Released Tesla Models</h2>
+      <h2>Tesla Vehicle Lineup</h2>
       <div className="cars-grid">
-        {releasedCars.map((car, index) => (
-          <div key={index} className="car-card">
-            <h3>{car.name}</h3>
-            <div className="car-details">
-              <p>Model: {car.model}</p>
-              <p>Year: {car.year}</p>
+        {carFeatures.map((car) => (
+          <div key={car.id} className="car-card">
+            <div className="card-header">
+              <span className="card-number">{car.id}</span>
+              <span className="card-icon">{car.icon}</span>
             </div>
+            <h3>{car.title}</h3>
+            <p className="card-description">{car.description}</p>
+            <button className="read-more-btn">Read More</button>
           </div>
         ))}
       </div>
